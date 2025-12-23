@@ -249,3 +249,121 @@ footer {
     margin-right: 10px;
     cursor: pointer;
 }
+
+/* Tablets */
+@media (max-width: 1024px) {
+    .search-bar {
+        width: 35%;
+    }
+
+    .category-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .circle-grid {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+}
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+
+    /* HEADER */
+    header {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 10px 4%;
+    }
+
+    .logo-container {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .nav-links {
+        width: 100%;
+        justify-content: space-between;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .nav-links a {
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    /* SEARCH BAR */
+    .search-bar {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    /* USER ACTIONS */
+    .user-actions {
+        width: 100%;
+        justify-content: space-around;
+        margin-top: 10px;
+    }
+
+    /* HEADINGS */
+    .section-heading h4 {
+        font-size: 20px;
+        text-align: center;
+        letter-spacing: 0.05em;
+    }
+
+    /* CATEGORY GRID */
+    .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .overlay h3 {
+        font-size: 14px;
+    }
+
+    .overlay span {
+        font-size: 12px;
+    }
+
+    /* CIRCLE GRID */
+    .circle-grid {
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .circle-item img {
+        width: 120px;
+        height: 120px;
+    }
+
+    /* FOOTER */
+    footer {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .footer-column {
+        align-items: center;
+    }
+}
+
+/* Extra Small Devices */
+@media (max-width: 480px) {
+
+    .nav-links a {
+        font-size: 11px;
+    }
+
+    .circle-item img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .section-heading {
+        margin: 30px 0 20px;
+    }
+}
