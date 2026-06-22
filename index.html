@@ -16,8 +16,8 @@
                 alt="Myntra Logo" class="myntra-logo"> </div>
         <nav class="nav-links"> <a href="#">MEN</a> <a href="#">WOMEN</a> <a href="#">KIDS</a> <a href="#">HOME &
                 LIVING</a> <a href="#">BEAUTY</a> <a href="#">STUDIO <sup class="new-tag">NEW</sup></a> </nav>
-        <div class="search-bar"> <span class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></span> <input
-                type="text" placeholder="Search for products, brands and more"> </div>
+        <div class="search-bar"> <span class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></span> <input type="text" id="searchInput"
+placeholder="Search for products, brands and more"> </div>
         <div class="user-actions">
             <div class="action-item"> <i class="fa-regular fa-user"></i> <span>Profile</span> </div>
             <div class="action-item"> <i class="fa-regular fa-heart"></i> <span>Wishlist</span> </div>
@@ -26,8 +26,10 @@
     </header>
     <main>
         <div class="coupon-strip">
-            <p>Flat ₹200 OFF on your first purchase! Code: <strong>MYNTRA200</strong></p>
-        </div>
+    <p>Flat ₹200 OFF on your first purchase! Code: <strong>MYNTRA200</strong></p>
+</div>
+
+<p id="timer"></p>
         <section class="hero-section"> <img
                 src="https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2022/3/1/31200885-2552-4f5a-8a92-be464905ce181646151056720-MFH-Desktop-Banner-.jpg"
                 alt="End of Reason Sale"> </section>
@@ -101,6 +103,7 @@
             </div>
         </section>
     </main>
+    <p id="message"></p>
     <footer>
         <div class="footer-column">
             <h3>ONLINE SHOPPING</h3> <a href="#">Men</a> <a href="#">Women</a> <a href="#">Kids</a> <a href="#">Home &
@@ -122,6 +125,56 @@
                         alt="App Store"></a> </div>
         </div>
     </footer>
+    <script>
+
+/* Search Functionality */
+const searchInput = document.getElementById("searchInput");
+
+searchInput.addEventListener("keyup", function () {
+    let value = searchInput.value.toLowerCase();
+
+    let items = document.querySelectorAll(".circle-item");
+
+    items.forEach(function (item) {
+        let text = item.innerText.toLowerCase();
+
+        if (text.includes(value)) {
+            item.style.display = "block";
+        } else {
+            item.style.display = "none";
+        }
+    });
+});
+console.log("Welcome to Myntra Clone");
+
+/* Product Click Message */
+let products = document.querySelectorAll(".grid-item");
+
+products.forEach(function(product){
+    product.addEventListener("click", function(){
+        alert("Product page coming soon!");
+    });
+});
+
+/* Countdown Timer */
+let time = 3000;
+
+setInterval(function () {
+
+    let min = Math.floor(time / 60);
+    let sec = time % 60;
+
+    document.getElementById("timer").innerHTML =
+        "⏳ Offer Ends In: " + min + ":" +
+        (sec < 10 ? "0" + sec : sec);
+
+    if (time > 0) {
+        time--;
+    }
+
+}, 1000);
+</script>
+
 </body>
 
 </html>

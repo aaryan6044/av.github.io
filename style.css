@@ -366,3 +366,29 @@ footer {
         margin: 30px 0 20px;
     }
 }
+
+/* Timer */
+
+#timer {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    color: #ff3f6c;
+    margin: 15px 0;
+}
+
+/* Product Message */
+
+#message {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    color: #ff3f6c;
+    margin: 25px 0;
+}
+
+/* Search Animation */
+
+.circle-item {
+    transition: all 0.3s ease;
+}
